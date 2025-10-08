@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ra主页</title>
+    <!-- 引入Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>  -->
+	<script src="./tailwind.js"></script>
+
+
+</head>
+<body class="bg-white text-gray-900 min-h-screen font-sans transition-custom">
+    <div class="container mx-auto px-4 py-20 max-w-2xl">
+        <!-- 个人信息 -->
+        <div class="mb-16 fade-in" style="animation-delay: 0.1s">
+            <h1 class="text-[clamp(2.5rem,8vw,4rem)] font-bold mb-6 leading-tight">Ra</h1>
+            <p class="text-gray-600 text-lg md:text-xl max-w-lg">
+             盥而不荐，有孚顒若。
+            </p>
+        </div>
+        
+        <!-- 导航链接 -->
+        <div class="space-y-4 mb-16 fade-in" style="animation-delay: 0.3s">
+            <a href="./index/index.html" class="block py-2 border-b border-gray-100 text-gray-800 hover:text-accent transition-custom">
+                关于|<i class="fa fa-dribbble w-6"></i>
+                <span class="ml-3">主页</span>
+            </a>
+            <a href="https://gitee.com/" class="block py-2 border-b border-gray-100 text-gray-800 hover:text-accent transition-custom">
+                作品|<i class="fa fa-github w-6"></i>
+                <span class="ml-3">github/gitee</span>
+            </a>			
+            <a href="#contact" class="block py-2 border-b border-gray-100 text-gray-800 hover:text-accent transition-custom">
+                联系|<i class="fa fa-envelope-o w-6"></i>
+                <span class="ml-3">1204968756@qq.com</span>
+            </a>
+        </div>
+        
+		<div id="hometime" class="text-gray-500 text-lg md:text-xl mb-2"></div>
+    </div>
+    
+       <!-- 页脚 -->
+    <footer class="py-8 border-t border-gray-200 fade-in" style="animation-delay: 0.9s">
+        <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+			 <p>Copyright &copy; 2018-2030
+            <script async src="./bsztj.js"></script>
+            <span id="busuanzi_container_site_pv"> | 🌡️
+                <span id="busuanzi_value_page_pv"></span>℃ </span> |
+            <a class="flink" href="#">Ra</a>
+        </p>
+        </div>
+    </footer>
+
+</body>
+<script>
+    function getD1() {
+        var date = new Date();
+        var d1 = date.toLocaleString();
+        document.getElementById("hometime").innerHTML = d1;
+    }
+    setInterval("getD1();", 1000);
+</script>
+</html>
+    
